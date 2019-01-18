@@ -13,7 +13,7 @@ Script name ANIMIST 3.1
 - DPS3:  Gbaya --> Enchant --> 39 Mana Magic, 37 Enchantments, Light 4  --> Window name: DPS3
 - DPS4: Dourou --> Enchant  --> 39 Mana Magic, 37 Enchantments, Light 4  --> Window name: DPS4
 
-##==REV: 00.06 Date 17.01.2019 16:42==
+##==REV: 00.07 Date 18.01.2019 13:35==
 
 ####Team Description:
 - Update the Team descrition with proper Enchant's specialisation
@@ -43,6 +43,6 @@ Script name ANIMIST 3.1
 - Simplify the command's, one command for the Driver and a command for HEALER1-2 & BLOCKOT 
 
 ####F7 hotkey:
-- Simplify the command's, one command for the 2 Animist's, cot AOE x 2 
-- Simplify the command's, one command for the 2 Enchant's, cot AOE x 2 
+- Simplify the command's, one command for the 2 Animist's, cast AOE x 2 
+- Simplify the command's, one command for the 2 Enchant's, cast AOE x 2 
 - Added a delay of 600 ms to the Enchant AOE to avoid them catching the aggro over the PET TANK
