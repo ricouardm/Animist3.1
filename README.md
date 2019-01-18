@@ -1,36 +1,48 @@
-Script name ANIMIST 3.4
+Script name ANIMIST 3.1
 
-===== REV: 00.08 Date 16.01.2019 16:42 =====
+#Description : Mojoware, Daoc Animist Macro Team ( 2 Animist's, 1 Warden, 2 Bard's, 1 Druid and 2 Enchant's)
 
-# Fine name :ANIMIST 3.4.txt
+#Team Composition: 
 
-Team description:
-  - Removed the dual entry for the Driver
-  - Correct some typo's
+- DRIVER : Gazpard --> Bard -->  Nuture 50, Regrowth 43  --> Window name: DRIVER
+- HEALER1: Mimipousse --> Bard -->  Nuture 50, Regrowth 43  --> Window name:  HEALER1
+- HEALER2: Bamilekee --> 42 nurture, 33 regen  --> Window name: HEALER2 
+- BLOCKBOT: Bamoun --> 42 shield, 33 regrowth, 49 nurture  --> Window name: BLOCKBOT
+- DPS1:  Ewondo --> Animist Verdant --> 43 Verdant, 32 Creeping  --> Window name: DPS1
+- DPS2:  Manguissa --> Animist Verdant --> 43 Verdant, 32 Creeping  --> Window name: DPS2
+- DPS3:  Gbaya --> Enchant --> 39 Mana Magic, 37 Enchantments, Light 4  --> Window name: DPS3
+- DPS4: Dourou --> Enchant  --> 39 Mana Magic, 37 Enchantments, Light 4  --> Window name: DPS4
 
-F3 hotkey:
-- Animist will now only cast one wisp and after drain 
-- Animist will not send PET to target as this is not possible at low level. This will be updated at later stage
-- Update the timer of life drain to reflect the exact timer ( 3100 ms to 2800 ms)
-- Correct some typo's
+##==REV: 00.06 Date 17.01.2019 16:42==
 
-F8 hotkey:
-- Correct some typos
-- Removed the self bubble from DPS1-4 and DRIVER
+####Team Description:
+- Update the Team descrition with proper Enchant's specialisation
 
-Minus hotkey:
-- Correct some typos
-- Removed the self bubble from DPS1-4 and DRIVER
+####F1 hotkey:
+- Simplify the command's, one command for the 2 Animist's 
+- Animist will plant 2 DPS shroom and 1 heal shroom
+- Added 2 DPS shroom and 1 heal shroom if needed. Need to un-coment them if necessary
 
-Oem4 hotkey:
-- Break down the PET sequence cast to be able to have PET bubbles not stacked (added a buffer of 200ms between casts)
+####F2 hotkey:
+- Simplify the command's, one command for the 2 Animist's 
+- Simplify the command's, one command for the 2 Enchant's 
+- Added a delay of 600 ms to the Enchant AOE to avoid them catching the aggro over the PET TANK
+- Added Group Heal that healers cast heal during AOE's
 
-# File name: ANIMIST KEYBOARD.json
-- Removed Key 3 & 5 to free up space and barely used
+####F3 hotkey:
+- Simplify the command's, one command for the 2 Animist's 
+- Simplify the command's, one command for the 2 Enchant's 
 
-# File name: ANIMIST KEYBOARD.jpg
-- Removed Key 3 & 5 to free up space and barely used
+####F4 hotkey:
+- Simplify the command's, one command for the 4 healer's (Druide , Bard's and Blockbot) 
 
-# Fine name :ANIMIST 3.0 REvision Notes.txt
-- File creation to track changes
+####F5 hotkey:
+- Simplify the command's, one command for the 4 healer's (Druide , Bard's and Blockbot) 
 
+####F6 hotkey:
+- Simplify the command's, one command for the Driver and a command for HEALER1-2 & BLOCKOT 
+
+####F7 hotkey:
+- Simplify the command's, one command for the 2 Animist's, cot AOE x 2 
+- Simplify the command's, one command for the 2 Enchant's, cot AOE x 2 
+- Added a delay of 600 ms to the Enchant AOE to avoid them catching the aggro over the PET TANK

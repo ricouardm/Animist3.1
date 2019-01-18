@@ -1,6 +1,6 @@
 // Team Animist  3.1
 
-// Script Version :  00.05 Date: 01.12.2018 11:34
+// Script Version :  00.07 Date: 18.01.2018 13:35
 
 // IP ADD of DAOC SRV : 107.23.173.143
 
@@ -14,8 +14,8 @@
 // BLOCKBOT: Bamoun --> 42 shield, 33 regrowth, 49 nurture  --> Window name: BLOCKBOT
 // DPS1:  Ewondo --> Animist Verdant --> 43 Verdant, 32 Creeping  --> Window name: DPS1
 // DPS2:  Manguissa --> Animist Verdant --> 43 Verdant, 32 Creeping  --> Window name: DPS2
-// DPS3:  Gbaya --> Enchant --> 40 Verdant, 3X Creeping  --> Window name: DPS3
-// DPS4: Dourou --> Enchant  --> 40 Verdant, 3X Creeping  --> Window name: DPS4
+// DPS3:  Gbaya --> Enchant --> 39 Mana Magic, 37 Enchantments, Light 4 --> Window name: DPS3
+// DPS4: Dourou --> Enchant  --> 39 Mana Magic, 37 Enchantments, Light 4 --> Window name: DPS4
 
 
 Hotkey ( F1 ) // Mushroom
@@ -24,157 +24,114 @@ Hotkey ( F1 ) // Mushroom
    
 Package
 
-   {
-    Sendto ( DPS1)
+  {
+    Sendto (DPS1 DPS2)
 
-   Key (4)  // Planting Med DPS Mushroom
-   Wait (3800)
-   Key (M)  // Planting Heal Mushroom
-   Wait (3800)
-   //Key (M)  // Planting Heal Mushroom
-   //Wait (3800) 
-    }
-
-Package
-
-   {
-    Sendto ( DPS2)
-
-   Key (4)  // Planting Med DPS Mushroom
-   Wait (3800)
-   Key (M)  // Planting Heal Mushroom
-   Wait (3800)
-   //Key (M)  // Planting Heal Mushroom
-   //Wait (3800) 
-    }
-
- }
+  Key (4)  // Planting DPS Mushroom
+  Wait (3800)
+  Key (4)  // Planting DPS Mushroom
+  Wait (3800)
+  Key (M)  // Planting Heal Mushroom
+  Wait (3800)
+  //Key (4)  // Planting DPS Mushroom
+  //Wait (3800)
+  //Key (4)  // Planting DPS Mushroom
+  //Wait (3800)
+  //Key (M)  // Planting Heal Mushroom
+  //Wait (3800) 
+  }
 
 Hotkey ( F2 ) // AOE Spell
 {
    
 Package
 
-   {
-    Sendto ( DPS1)
+  {
+  Sendto (DPS1 DPS2)
 
-   Key (2)  // Casting AOE spell
-   Wait (3300)
-   //Key (2)  // Casting AOE spell
-   //Wait (3300)
-    }
-
-Package
-
-   {
-    Sendto ( DPS2)
-
-   Key (2)  // Casting AOE spell
-   Wait (3300)
-   //Key (2)  // Casting AOE spell
-  // Wait (3300)
-    }
+  Key (2)  // Casting AOE spell
+  Wait (3300)
+  //Key (2)  // Casting AOE spell
+  //Wait (3300)
+  }
 
 Package
 
-   {
-    Sendto ( DPS3)
+  {
+    Sendto (DPS3 DPS4)
 
-   Wait (600)
-   Key (2)  // Casting AOE spell
-   Wait (2800)
-   //Key (2)  // Casting AOE spell
-  //Wait (2800)
-    }
+  Key (2)  // Casting AOE spell
+  Wait (3400)
+  //Key (2)  // Casting AOE spell
+  // Wait (3400)
+  }
 
 Package
 
-   {
-   Sendto ( DPS4)
-
-   Wait (600)
-   Key (2)  // Casting AOE spell
-   Wait (2800)
-   //Key (2)  // Casting AOE spell
-   //Wait (2800)
-    }
-
+  {
+  Sendto (DRIVER HEALER1 HEALER2 BLOCKBOT)
+  
+  Wait (3400)
+  Key (3) // All healers cast standard group heal
+  Wait (2300)
+  }
+ 
  }
 
-Hotkey (F3) // All DPS Drain
+Hotkey (F3) // All DPS Cast single DD
 
 {
  
-    Package
+  Package
 
-   {
-    Sendto (DPS1)
-    Slash ( "/assist DRIVER" )
-    Wait (300)
-    Slash ( "/face" )
-    Wait (300)
-    Key (0) // all DPS cast Debbuf Constitution
-    Wait (300)
-    Key (9) //all DPS cast Debbuf Drain
-    Wait (2800)
-    Key (9) //all DPS cast Debbuf Drain
-    Wait (2800)
-    }
+  {
+  Sendto (DPS1 DPS2)
+  Slash ( "/assist DRIVER" )
+  Wait (300)
+  Slash ( "/face" )
+  Wait (300)
+  Key (1) // Send pet
+  Wait (300) 
+  Key (0) // All Animists cast Debbuf Constitution
+  Wait (300)
+  Key (8) // All Animists cast Wisp
+  Wait (2800)
+  Key (9) // All Animists cast Drainlife
+  Wait (2800)
+  Key (9) // All Animists cast Drainlife
+  Wait (2800)
+  }
 
-Package
+  Package
 
-   {
-    Sendto (DPS2)
-    Slash ( "/assist DRIVER" )
-    Wait (300)
-    Slash ( "/face" )
-    Wait (300)
-    Key (0) // all DPS cast Debbuf Constitution
-    Wait (300)
-    Key (9) //all DPS cast Debbuf Drain
-    Wait (2800)
-    Key (9) //all DPS cast Debbuf Drain
-    Wait (2800)
-    }
-
+  {
+  Sendto (DPS3 DPS4)
+  Slash ( "/assist DRIVER" )
+  Wait (300)
+  Slash ( "/face" )
+  Wait (300)
+  Key (0) // All Enchant's cast Debbuf Heat
+  Wait (2300)
+  Key (9) // All Enchant's cast Heat DD
+  Wait (2900)
+  Key (9) // All Enchant's cast Heat DD
+  Wait (2900)
+  }
 }
 
 Hotkey (F4) // All Healers Cast standard  group heal
 
 {
  
- Package
+  Package
 
-   {
-    Sendto (DRIVER)
-    Key (3) //all healers cast standard group heal
-    Wait (2300)
-    }
-   
-   Package
-
-   {
-    Sendto (HEALER1)
-    Key (3) //all healers cast standard group heal
-    Wait (2300)
-    }
-
-	Package
-
-   {
-    Sendto (HEALER2)
-    Key (3) // all healers cast standard group heal
-    Wait (2300)
-    }
-
-	Package
-
-   {
-    Sendto (BLOCKBOT)
-    Key (3) // all healers cast standard group heal
-    Wait (2900)
-    }
-
+  {
+  Sendto (DRIVER HEALER1 HEALER2 BLOCKBOT)
+  
+  Key (3) //all healers cast standard group heal
+  Wait (2300)
+  }
+  
 }
 
 Hotkey (F5) // All Healers Cast specialized  group heal
@@ -183,79 +140,38 @@ Hotkey (F5) // All Healers Cast specialized  group heal
  
  	Package
 
-   {
-    Sendto (DRIVER)
-    Key (6) //Large specialized group heal
-    Wait (3300)
-    }
+  {
+  Sendto (DRIVER HEALER1 HEALER2 BLOCKBOT)
   
-    Package
-
-   {
-    Sendto (HEALER1)
-    Key (6) //Large specialized group heal
-    Wait (3300)
-    }
-
-	Package
-
-   {
-    Sendto (HEALER2)
-    Key (6) // Large specialized group heal
-    Wait (3300)
-    }
-
-	Package
-
-   {
-    Sendto (BLOCKBOT)
-    Key (6) // Large specialized group heal
-    Wait (3300)
-    }
-
+  Key (6) //Large specialized group heal
+  Wait (3300)
+  }
+  
 }
 
 Hotkey (F6) // All Healers Cast specialized heal on Driver Target
 
 {
  
-    Package
+  Package
 
-   {
-    Sendto (DRIVER)
-    Key (5) //Large specialized single target heal
-    Wait (3300)
-    }
+  {
+  Sendto (DRIVER)
+  
+  Key (5) //Large specialized single target heal
+  Wait (3300)
+  }
 
-    Package
+  Package
 
-   {
-    Sendto (HEALER1)
-    Slash ( "/assist DRIVER" )
-    Wait ( 300 )
-    Key (5) //Large specialized single target heal
-    Wait (3300)
-    }
-
-	Package
-
-   {
-    Sendto (HEALER2)
-    Slash ( "/assist DRIVER" )
-    Wait ( 300 )
-    Key (5) // Large specialized single target heal
-    Wait (3300)
-    }
-
-	Package
-
-   {
-    Sendto (BLOCKBOT)
-    Slash ( "/assist DRIVER" )
-    Wait ( 300 )
-    Key (5) // Large specialized single target heal
-    Wait (3300)
-    }
+  {
+  Sendto (HEALER1 HEALER2 BLOCKBOT)
+  
+  Slash ( "/assist DRIVER" )
+  Wait ( 300 )
+  Key (5) //Large specialized single target heal
+  Wait (3300)
+  }
 
 }
 
